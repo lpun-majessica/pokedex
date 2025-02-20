@@ -28,7 +28,7 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: 2rem 0;
+	margin: 2rem 0 5rem 0;
 }
 
 #title {
@@ -41,9 +41,8 @@ main {
 	border-radius: 10px;
 	height: 12vh;
 	min-height: 100px;
-	width: 50vw;
+	width: 80vw;
 	max-width: 500px;
-	min-width: 375px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -62,6 +61,7 @@ main {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 	gap: 1rem;
 }
 
@@ -72,6 +72,7 @@ main {
 	text-align: center;
 	font-size: 2rem;
 	margin-left: 0.5rem;
+	width: 70%;
 }
 
 #search-button {
@@ -121,7 +122,8 @@ main {
 	width: 3rem;
 	border-radius: 10px;
 	background-color: var(--pokedex-red);
-	box-shadow: 0 3px 10px, 0 -3px 10px;
+	box-shadow: 0 3px 10px, 0 -3px 10px, 1px 1px 5px var(--dark-red) inset,
+		-1px -1px 5px var(--dark-red) inset;
 }
 
 .screen {
@@ -245,6 +247,14 @@ main {
 	margin: 5px 0;
 }
 
+#button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
 #previous-btn,
 #next-btn {
 	background-color: var(--grey);
@@ -256,7 +266,6 @@ main {
 	border-radius: 1rem;
 	box-shadow: 0 0.5rem var(--dark-red);
 	cursor: pointer;
-	margin: 0 1rem;
 }
 
 #previous-btn:active,
@@ -308,6 +317,84 @@ td {
 	#hinge {
 		width: 450px;
 		height: 3rem;
+	}
+}
+
+@media (max-width: 500px) {
+	#title {
+		font-size: 3rem;
+	}
+
+	#search-input {
+		font-size: 3.5vw;
+		height: 2.5rem;
+	}
+
+	#prompt {
+		display: none;
+	}
+
+	#general-info {
+		height: 120vw;
+		width: 90vw;
+		margin: 0 auto;
+	}
+
+	#hinge,
+	#stats {
+		display: none;
+	}
+
+	.screen {
+		border: 5vw solid var(--shadow);
+	}
+
+	#id-container {
+		height: 6vw;
+	}
+	#pokemon-name {
+		font-size: 4vw;
+	}
+	#pokemon-id {
+		font-size: 3vw;
+	}
+
+	#previous-btn,
+	#next-btn {
+		height: 10vw;
+		padding: 2vw;
+		font-size: 3vw;
+		width: 35vw;
+		margin-top: -1rem;
+		margin-bottom: 1rem;
+	}
+
+	#image-container {
+		width: 70vw;
+		margin-top: 5px;
+		height: 57vw;
+	}
+
+	#front-default {
+		height: 35vw;
+		width: 35vw;
+	}
+
+	#front-shiny {
+		height: 28vw;
+		width: 28vw;
+	}
+
+	#back-shiny,
+	#back-default {
+		height: 24vw;
+		width: 24vw;
+	}
+
+	.type {
+		font-size: 3.5vw;
+		width: 25vw;
+		height: 9vw;
 	}
 }
 
