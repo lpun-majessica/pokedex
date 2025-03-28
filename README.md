@@ -1,4 +1,4 @@
-# Pokedex
+# [Pokedex](https://lpun-majessica.github.io/pokedex/)
 
 Enter a Pokemon name or its National Pokedex number to find its information :D
 
